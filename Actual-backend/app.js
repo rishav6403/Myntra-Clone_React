@@ -1,12 +1,14 @@
 import express from "express"
 import bodyParser from "body-parser";
 import path from "path";
+import { fileURLToPath } from 'url';
 const PORT = process.env.PORT || 8080;
 
 import { getStoredItems, storeItems } from "./data/items";
 
 const app = express();
-const __dirname = path.resolve();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "/Myntra-Clone-React/dist")));
