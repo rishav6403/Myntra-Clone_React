@@ -1,13 +1,13 @@
 const fs = require('node:fs/promises');
 
-export async function getStoredItems() {
+async function getStoredItems() {
   const rawFileContent = await fs.readFile('items.json', { encoding: 'utf-8' });
   const data = JSON.parse(rawFileContent);
   const storedItems = data.items ?? [];
   return storedItems;
 }
 
-export function storeItems(items) {
+function storeItems(items) {
   return fs.writeFile('items.json', JSON.stringify({ items: items || [] }));
 }
 
