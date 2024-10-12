@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node Actual-backedn/app.js",
+    "start": "node Actual-backend/app.js",
     "build": "cd Myntra-Clone-React && npm install && npm run build "
   },
   "keywords": [],
