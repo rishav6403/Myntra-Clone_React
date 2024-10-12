@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "start": "node Actual-backend/app.js",
+    "start": "node /Actual-backend/app.js",
     "build": "cd Myntra-Clone-React && npm install && npm run build"
   },
   "author": "",
