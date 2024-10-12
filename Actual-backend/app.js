@@ -1,11 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
+const PORT = process.env.PORT || 8080;
 
 const { getStoredItems, storeItems } = require('./data/items');
 
 const app = express();
+const __dirname = path.resolve();
 
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "/Myntra-Clone-React/dist")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "Myntra-Clone-React", "dist", "index.html"));
+});
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -38,4 +46,6 @@ app.post('/items', async (req, res) => {
   res.status(201).json({ message: 'Stored new item.', item: newItem });
 });
 
-app.listen(8080);
+
+
+app.listen(PORT);
