@@ -6,6 +6,7 @@
     "start": "node Actual-backend/app.js",
     "build": "cd Myntra-Clone-React && npm install && npm run build"
   },
+  "type":"module",
   "author": "",
   "license": "ISC",
   "description": "",
