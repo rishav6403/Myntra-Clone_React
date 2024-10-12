@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import path from "path";
 const PORT = process.env.PORT || 8080;
 
-const { getStoredItems, storeItems } = require('./data/items');
+import { getStoredItems, storeItems } from "./data/items";
 
 const app = express();
 const __dirname = path.resolve();
