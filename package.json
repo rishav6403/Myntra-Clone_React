@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
+    "server":"nodemon Actual-backend/app.js",
     "start": "node Actual-backend/app.js",
-    "build": "cd Myntra-Clone-React && npm install && npm run build"
+    "build": "npm install && npm install --prefix Myntra-Clone-React && npm run build --prefix Myntra-Clone-React"
   },
   "author": "",
   "license": "ISC",
