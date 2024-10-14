@@ -15,7 +15,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, 'Myntra-Clone-React/build')));
+app.use(express.static(path.join(__dirname, 'Myntra-Clone-React/dist')));
 
 app.get('/items', async (req, res) => {
   const storedItems = await getStoredItems();
@@ -41,7 +41,7 @@ app.post('/items', async (req, res) => {
   res.status(201).json({ message: 'Stored new item.', item: newItem });
 });
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Myntra-Clone-React/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'Myntra-Clone-React/dist', 'index.html'));
 });
 
 app.listen(PORT,()=>{
