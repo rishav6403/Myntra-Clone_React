@@ -41,7 +41,7 @@ app.post('/items', async (req, res) => {
   res.status(201).json({ message: 'Stored new item.', item: newItem });
 });
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Myntra-Clone-React" ,"dist', 'index.html'));
+  res.sendFile(path.join(__dirname, "../Myntra-Clone-React" ,"dist", "index.html"));
 });
 
 app.listen(PORT,()=>{
