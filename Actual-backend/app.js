@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const path = require("path")
 
 const { getStoredItems, storeItems } = require('./data/items');
-const PORT = "https://myntra-clone-react-z7bp.onrender.com" || 8080;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 app.use(bodyParser.json());
