@@ -20,7 +20,7 @@ const FetchItems = () => {
       .then(({ items }) => {
         dispatch(fetchStatusAction.markFetchDone());
         dispatch(fetchStatusAction.markFetchFinished());
-        dispatch(itemsAction.addInitialItems(items[0]));
+        dispatch(itemsAction.addInitialItems(items));
       })
       .catch((error) => {
         if (error.name !== "AbortError") {
