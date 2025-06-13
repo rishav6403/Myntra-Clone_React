@@ -15,7 +15,7 @@ const FetchItems = () => {
 
     dispatch(fetchStatusAction.markFetchStart());
 
-    fetch(`${import.meta.env.VITE_BACKEND_URL}/items`, { signal })
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/items`)
       .then((res) => res.json())
       .then(({ items }) => {
         dispatch(fetchStatusAction.markFetchDone());
