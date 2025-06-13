@@ -8,7 +8,7 @@ async function getStoredItems() {
     const rawFileContent = await fs.readFile(filePath, { encoding: 'utf-8' });
     const data = JSON.parse(rawFileContent);
     const storedItems = data.items ?? [];
-    return storedItems;
+    return storedItems[0] ?? [];
   } catch (err) {
     if (err.code === 'ENOENT') {
       await storeItems([]);
