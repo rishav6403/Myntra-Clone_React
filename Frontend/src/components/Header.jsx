@@ -8,7 +8,7 @@ const Header = () => {
   const bag = useSelector((store) => store.bag);
 
   return (
-    <header className="sticky-top bg-white shadow-sm overflow-scroll">
+    <header className="sticky-top bg-white shadow-sm">
       <nav className="navbar navbar-expand-lg container py-2">
         {/* Logo */}
         <Link className="navbar-brand" to="/">
@@ -19,7 +19,7 @@ const Header = () => {
           />
         </Link>
 
-        {/* Hamburger for mobile */}
+        {/* Hamburger Toggle */}
         <button
           className="navbar-toggler border-0"
           type="button"
@@ -32,9 +32,9 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Nav content */}
+        {/* Nav and Actions */}
         <div className="collapse navbar-collapse" id="mainNavbar">
-          {/* Scrollable nav links on mobile */}
+          {/* Nav Links with Horizontal Scroll on Small Devices */}
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 flex-nowrap overflow-auto gap-2 px-2 text-nowrap">
             <li className="nav-item"><Link className="nav-link" to="#">Men</Link></li>
             <li className="nav-item"><Link className="nav-link" to="#">Women</Link></li>
@@ -48,8 +48,8 @@ const Header = () => {
             </li>
           </ul>
 
-          {/* Search bar hidden on small screens */}
-          <form className="d-none d-lg-flex me-3 w-50" role="search">
+          {/* Search Bar - Only on Large Screens */}
+          <form className="d-none d-lg-flex me-3 w-50">
             <input
               className="form-control"
               type="search"
@@ -58,7 +58,7 @@ const Header = () => {
             />
           </form>
 
-          {/* Action icons */}
+          {/* Action Icons */}
           <div className="d-flex align-items-center gap-3">
             <div className="text-center">
               <IoPersonSharp size={22} />
