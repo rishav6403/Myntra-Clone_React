@@ -379,3 +379,8 @@ a.action_container:link {
 .spinner {
   margin: 100px 0px;
 }
+@media screen and (max-width: 430px) {
+  .nav_bar, .search_bar{
+    display: none;
+  }
+}
